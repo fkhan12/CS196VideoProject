@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Sports Page</title>
+<style>
+header {
+	background-color: white;
+}
+body {
+	background: url("http://sportstardom.com/wp-content/uploads/2016/11/toughest-sports.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.container{
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+}
+.inner-body{
+	display: inline-block;
+	margin 2px;
+	border: 1px solid white;
+	background-color: #ffffff;
+	padding: 15px;
+	width: 70%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.iframecontainer {
+	position: relative;
+	width: 600px;
+	height: 320px;
+	left: calc(25% - 50px)
+}
+.iframecontainer-div{
+	position: absolute;
+	top: 160px;
+	left: -200px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1 align="center">Post Videos About Sports Here!</h1>
+</header>
+
+<form method="post">
+	Username:<br>
+	<input type="text" name="username"><br>
+	Comment:<br>
+	<input type="text" name="comment"><br>
+	<input type="submit" value="Submit">
+</form>
+
+<div class="container">
+
+	<div class="inner-body">
+		<p>Video 1</p>
+		<div class="iframecontainer">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Pd3_4Z2tbFU" frameborder="0" sytle="float:middle" allowfullscreen>
+			</iframe>
+			<div class="iframecontainer-div">
+				<div id="upvotes">Vote Count: 0</div>
+				<script type ="text/javascript">
+					var upvotes = 0;
+					function IncreaseVotes()
+					{
+						upvotes++;
+						document.getElementById("upvotes").innerHTML = "Vote Count: " + upvotes;
+					}
+					</script>
+					
+					<input type="button" onClick="IncreaseVotes()" value="Like" />
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
