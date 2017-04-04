@@ -1,12 +1,11 @@
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return """
-    <iframe src="https://www.youtube.com/embed/YQHsXMglC9A" width="853" height="480" frameborder="0" allowfullscreen></iframe>
-    """
+    return render_template(homepage.html)
 
 
 if __name__=="__main__":
