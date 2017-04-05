@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script> src="script.js"</script>
+		<title>PROJECT</title>
+	</head>
+	<body>
+	
+	<!-- Simple header with fixed tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+							mdl-layout--fixed-tabs">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">Project - Video Sharing!</span>
+				<!-- Search Button -->
+				<div class="mdl-layout-spacer">
+				</div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+					<label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+						<i class="material-icons">search</i>
+					</label>
+					<div class="mdl-textfield__expandable-holder">
+						<input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+					</div>
+				</div>
+				<!-- Search Button ENDS -->
+			</div>
+			
+			<!-- Top tabs -->
+			<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+				<a href="#fixed-tab-1" class="mdl-layout__tab is-active">Home</a>
+				<a href="#fixed-tab-2" class="mdl-layout__tab">Browsing</a>
+				<a href="#fixed-tab-3" class="mdl-layout__tab">About</a>
+				<a href="#fixed-tab-4" class="mdl-layout__tab">Github</a>
+			</div>
+			<!-- Top tabs ENDS -->
+			
+		</header>
+		
+		<!-- Drawer -->
+		<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Categories</span>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="">Sports</a>
+					<a class="mdl-navigation__link" href="">Music</a>
+					<a class="mdl-navigation__link" href="">Movie</a>
+					<a class="mdl-navigation__link" href="">Others</a>
+				</nav>
+			</div>
+		<!-- Drawer ENDS -->
+		
+		<main class="mdl-layout__content">
+		
+			<!-- TAB1 CONTENT -->
+			<section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+				<br>
+				<br>
+				<br>
+				<center>
+				<div class="page-content">
+				<!-- Your content goes here -->
+					<!-- Wide card with share menu button -->
+					<style>
+					.demo-card-wide.mdl-card {
+						width: 512px;"
+					}
+					.demo-card-wide > .mdl-card__title {
+						color: #fff;
+						height: 176px;
+						background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+					}
+					.demo-card-wide > .mdl-card__menu {
+						color: #fff;
+					}
+					</style>
+
+					<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">Welcome</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Mauris sagittis pellentesque lacus eleifend lacinia...
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								Get Started
+							</a>
+						</div>
+						<div class="mdl-card__menu">
+							<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+								<i class="material-icons">share</i>
+							</button>
+						</div>
+					</div>
+				</div>
+				</center>
+			</section>
+			<!-- TAB1 CONTENT ENDS -->
+			
+			
+			<!-- TAB2 CONTENT -->
+			<section class="mdl-layout__tab-panel" id="fixed-tab-2">
+				<div class="page-content">
+				<!-- Your content goes here -->
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+						Button
+					</button>
+				</div>
+			</section>
+			<!-- TAB2 CONTENT ENDS -->
+			
+			<!-- TAB3 CONTENT -->
+			<section class="mdl-layout__tab-panel" id="fixed-tab-3">
+				<br>
+				<br>
+				<br>
+				<center>
+				<div class="page-content">
+				<!-- Your content goes here -->
+				
+				
+				<!-- Wide card with share menu button -->
+				<style>
+				.demo-card-wide.mdl-card {
+					width: 800px;
+				}
+				.demo-card-wide > .mdl-card__title {
+					color: #fff;
+					height: 176px;
+					background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+				}
+				.demo-card-wide > .mdl-card__menu {
+					color: #fff;
+				}
+				</style>
+
+				<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+					<div class="mdl-card__title">
+						<h2 class="mdl-card__title-text">Our Team!</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<style>
+						.demo-list-three {
+							width: 400px;
+						}
+						</style>
+
+						<ul class="demo-list-three mdl-list">
+							<li class="mdl-list__item mdl-list__item--three-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons mdl-list__item-avatar">person</i>
+									<span>Tianwei Peter Zhang</span>
+									<span class="mdl-list__item-text-body">
+										One of our frontend guys. He loves material design.
+									</span>
+								</span>
+								<span class="mdl-list__item-secondary-content">
+									<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--three-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons  mdl-list__item-avatar">person</i>
+									<span>Farhan Khan</span>
+									<span class="mdl-list__item-text-body">
+										One of our frontend guys. He wants to speak fluently in a second language (other than Java!).
+									</span>
+								</span>
+								<span class="mdl-list__item-secondary-content">
+									<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+								</span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--three-line">
+								<span class="mdl-list__item-primary-content">
+									<i class="material-icons  mdl-list__item-avatar">person</i>
+									<span>Madison Minnick</span>
+									<span class="mdl-list__item-text-body">
+										Our reliable backend engineer.
+									</span>
+								</span>
+								<span class="mdl-list__item-secondary-content">
+									<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="mdl-card__actions mdl-card--border">
+						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							Get in touch!
+						</a>
+					</div>
+					<div class="mdl-card__menu">
+						<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">share</i>
+						</button>
+					</div>
+				</div>
+			<!-- TAB3 CONTENT ENDS -->
+			
+			<!-- TAB4 CONTENT -->
+			<section class="mdl-layout__tab-panel" id="fixed-tab-4">
+				<div class="page-content">
+				<!-- Your content goes here -->
+				<h1>We are using github for work.</h1>
+				<p title="SURPRISE!">
+				We are doing this project as a student group.<br>
+				Our github page is posted here. If you are someone who's starting their own project, feel free to take a look and play with it if you want. (We won't be mad!)
+				</p>
+				<form action="https://github.com/fkhan12/CS196VideoProject">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+						Github Link
+					</button>
+				</form>
+				</div>
+			</section>
+			<!-- TAB4 CONTENT ENDS-->
+			
+		</main>
+	</div>
+	
+	
+	
+<!-- 		<h1>CS 196 Spring 2017</h1> -->
+<!-- 		<div> -->
+<!-- 			<a href="https://piazza.com">Piazza</a> -->
+<!-- 			<a href="https://w3schools.com">w3school</a> -->
+<!-- 		</div> -->
+<!-- 		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> -->
+<!-- 			Button -->
+<!-- 		</button> -->
+<!-- 		<div> -->
+<!-- 			<input type="button" value="Complain" onclick="complain()" -->
+<!-- 			<p id="myoutput"> </p> -->
+<!-- 		</div> -->
+<!-- 		<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"> -->
+<!-- 			<i class="material-icons">add</i> -->
+<!-- 		</button> -->
+<!-- 		<iframe width="420" height="315" -->
+<!-- 		src="https://www.youtube.com/embed/f0NdOE5GTgo"> -->
+<!-- 		</iframe> -->
+<!-- 		<p>Question</p> -->
+<!-- 		<form action="question"> -->
+<!-- 		<input type="text"> -->
+<!-- 		<input type="submit" value="Submit!"> -->
+	</body>
+</html>
