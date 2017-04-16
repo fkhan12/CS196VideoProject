@@ -8,14 +8,20 @@
 
 
 <head>
-	<title>Project VS</title>
+	<title>SOCCER CATEGORY</title>
 	<!-- 	<style> -->
 	<!-- 		 -->
 	<!-- 	</style> -->
 </head>
 
+<style>
+	#body {
+		width: 100%;
+		height: 100%;
+	}
+</style>
 
-<body>
+<body  id="body">
 	<!-- Master View -->
 	<!-- Simple header with scrollable tabs. -->
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -65,23 +71,7 @@
 		<!-- Drawer -->
 		<div class="cate-drawer mdl-layout__drawer">
 
-			<style>
-				.cate-drawer-separator {
-					height: 1px;
-					background-color: #dcdcdc;
-					margin: 8px 0;
-				}
-
-				.cate-drawer .mdl-navigation__link.mdl-navigation__link {
-					font-size: 14px;
-					color: #757575;
-				}
-
-				.cate-drawer span.mdl-navigation__link.mdl-navigation__link {
-					color: #3f51b5;
-					font-weight: bold;
-				}
-			</style>
+			
 
 			<span class="mdl-layout-title"><b>Categories</b></span>
 
@@ -94,9 +84,9 @@
 				<a class="mdl-navigation__link" href="">Other sports...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MUSIC</span>
-				<a class="mdl-navigation__link" href="">Pop</a>
 				<a class="mdl-navigation__link" href="">Classical</a>
-				<a class="mdl-navigation__link" href="">Rock</a>
+				<a class="mdl-navigation__link" href="">Pop</a>
+				<a class="mdl-navigation__link" href="">Instrumental</a>
 				<a class="mdl-navigation__link" href="">Other music...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MOVIE</span>
@@ -112,7 +102,7 @@
 		<!-- DrawerENDS -->
 
 		<!-- Content for each tab -->
-		<main class="mdl-layout__content">
+		<main class="mdl-layout__content" >
 
 			<!-- TAB1 -->
 			<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
@@ -338,6 +328,19 @@
 										<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">build</i></a>
 										</span>
 									</li>
+									<li class="mdl-list__item mdl-list__item--three-line">
+										<span class="mdl-list__item-primary-content">
+											<i class="material-icons  mdl-list__item-avatar">person_pin_circle</i>
+											<span>Ethan Rahman</span>
+										<span class="mdl-list__item-text-body">
+												Into econ and cs.
+											</span>
+										</span>
+										<span class="mdl-list__item-secondary-content">
+											<span class="mdl-list__item-secondary-info">Backend</span>
+										<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">power</i></a>
+										</span>
+									</li>
 								</ul>
 							</div>
 							<div class="mdl-card__supporting-text">
@@ -400,7 +403,8 @@
 							<br>
 							<div class="mdl-card__actions mdl-card--border">
 								<a href="https://github.com/google/material-design-lite" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect github">
-									<i class="material-icons">link</i> Github Link
+									<i class="material-icons">link</i>
+									Github Link
 								</a>
 							</div>
 						</div>
@@ -428,7 +432,7 @@
 				</div>
 				<div class="mdl-mega-footer--bottom-section">
 					<div class="mdl-logo">
-						<b>Made with ❤ at Illinois</b> 
+						<b>Made with ❤ at Illinois</b>
 					</div>
 					<ul class="mdl-mega-footer--link-list">
 						<li><a href="https://github.com/CS196Illinois">CS196 @ UIUC</a></li>
