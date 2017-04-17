@@ -71,7 +71,21 @@
 		<!-- Drawer -->
 		<div class="cate-drawer mdl-layout__drawer">
 
-			
+			<style>
+				.cate-drawer-separator {
+					height: 1px;
+					background-color: #dcdcdc;
+					margin: 8px 0;
+				}
+				.cate-drawer .mdl-navigation__link.mdl-navigation__link {
+					font-size: 14px;
+					color: #757575;
+				}
+				.cate-drawer span.mdl-navigation__link.mdl-navigation__link {
+					color: #3f51b5;
+					font-weight: bold;
+				}
+			</style>
 
 			<span class="mdl-layout-title"><b>Categories</b></span>
 
@@ -199,50 +213,67 @@
 					<br>
 					<br>
 					<center>
-						<!-- Wide card with share menu button -->
 						<style>
-							.demo-card-wide.mdl-card {
+							.feature-card-wide.mdl-card {
 								width: 512px;
 							}
 
-							.demo-card-wide>.mdl-card__title {
-								color: #fff;
-								height: 176px;
-								background: url('https://getmdl.io//assets/demos/welcome_card.jpg') center / cover;
+							.feature-card-wide>.mdl-card__title {
+								color: #ffffff;
+								height: 88px;
+								background: #EC407A;
 							}
 
-							.demo-card-wide>.mdl-card__menu {
+							.feature-card-wide>.mdl-card__menu {
 								color: #fff;
 							}
 						</style>
 
-						<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+						<div class="feature-card-wide mdl-card mdl-shadow--16dp">
 							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">Welcome</h2>
+								<h2 class="mdl-card__title-text">Features</h2>
 							</div>
-							<div class="mdl-card__supporting-text" align="left">
-								This is the home page.
-							</div>
-							<div class="mdl-card__actions mdl-card--border">
-								<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-									Get Started
-								</a>
-							</div>
-							<div class="mdl-card__menu">
-								<!-- Right aligned menu below button -->
-								<button id="share-menu" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-									<i class="material-icons">share</i>
-								</button>
+							<!-- Textfield with Floating Label -->
 
-								<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-menu">
-									<li class="mdl-menu__item">Share with friends!</li>
-									<li disabled class="mdl-menu__item">Disabled Action</li>
-									<li class="mdl-menu__item">Another Action</li>
-								</ul>
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="sample3">
+									<label class="mdl-textfield__label" for="sample3">YouTube Link</label>
+								</div>
+							</form>
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="sample3">
+									<label class="mdl-textfield__label" for="sample3">Your description or comments:</label>
+								</div>
+							</form>
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="sample3">
+									<label class="mdl-textfield__label" for="sample3">Your name</label>
+								</div>
+							</form>
+							<!-- Left aligned menu on top of button  -->
+							<button id="demo-menu-top-left"
+											class="mdl-button mdl-js-button mdl-button--icon">
+								<i class="material-icons">more_vert</i>
+							</button>
 
-							</div>
+							<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
+									data-mdl-for="demo-menu-top-left">
+								<li class="mdl-menu__item">Soccer</li>
+								<li class="mdl-menu__item">Football</li>
+								<li disabled class="mdl-menu__item">Pop</li>
+								<li class="mdl-menu__item">Classical</li>
+							</ul>
+
+							<!-- Accent-colored raised button with ripple -->
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+								Submit
+							</button>
+
 						</div>
-
+					</center>
 
 						<!-- Your content ENDS -->
 				</div>
