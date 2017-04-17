@@ -1,5 +1,20 @@
 ﻿<!DOCTYPE html>
 <html>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD2vOR9L3ZQO32GoMAUYykDML8KaTwGjo8",
+    authDomain: "cs196-videos.firebaseapp.com",
+    databaseURL: "https://cs196-videos.firebaseio.com",
+    projectId: "cs196-videos",
+    storageBucket: "cs196-videos.appspot.com",
+    messagingSenderId: "74735636940"
+  };
+  firebase.initializeApp(config);
+</script>
+
 <head>
 <title>Sports Page</title>
 <style>
@@ -46,13 +61,38 @@ body {
 <h1 align="center">Post Videos About Sports Here!</h1>
 </header>
 
-<form method="post">
-	Username:<br>
-	<input type="text" name="username"><br>
-	Comment:<br>
-	<input type="text" name="comment"><br>
+<form action="" method="post" name="api">
+	{{title(size=40)}}<br>
+	<input type="text" name="Title"><br>
+	{{field(size=40)}}<br>
+	<input type="text" name="Field"><br>
+	{{url(size=40)}}<br>
+	<input type="text" name="URL"><br>
 	<input type="submit" value="Submit">
 </form>
+
+{% block content %}
+	<h3> Complete below</h3>
+    <p>Please complete the form below<p>
+    <form action="" method="post" name="api">
+      <p> Please enter a movie you want to add.: <br>
+      {{ form.title(size=40) }}<br>
+      {% for error in form.title.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}<br>
+      <p> Please enter the year the movie was released.: <br>
+      {{ form.year(size=40) }} <br>
+      {% for error in form.year.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}<br>
+      <p> Please enter the rating you give the movie out of 10.: <br>
+      {{ form.rating(size=40) }} <br>
+      {% for error in form.rating.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}<br>
+      <p><input type ="submit" value="Add" class="btn btn-sm btn-primary"></p>
+    </form>
+{% end block %}
 
 <div class="container">
 
