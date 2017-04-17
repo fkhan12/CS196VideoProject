@@ -8,14 +8,20 @@
 
 
 <head>
-	<title>Project VS</title>
+	<title>SOCCER CATEGORY</title>
 	<!-- 	<style> -->
 	<!-- 		 -->
 	<!-- 	</style> -->
 </head>
 
+<style>
+	#body {
+		width: 100%;
+		height: 100%;
+	}
+</style>
 
-<body>
+<body  id="body">
 	<!-- Master View -->
 	<!-- Simple header with scrollable tabs. -->
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -71,12 +77,10 @@
 					background-color: #dcdcdc;
 					margin: 8px 0;
 				}
-
 				.cate-drawer .mdl-navigation__link.mdl-navigation__link {
 					font-size: 14px;
 					color: #757575;
 				}
-
 				.cate-drawer span.mdl-navigation__link.mdl-navigation__link {
 					color: #3f51b5;
 					font-weight: bold;
@@ -94,9 +98,9 @@
 				<a class="mdl-navigation__link" href="">Other sports...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MUSIC</span>
-				<a class="mdl-navigation__link" href="">Pop</a>
 				<a class="mdl-navigation__link" href="">Classical</a>
-				<a class="mdl-navigation__link" href="">Rock</a>
+				<a class="mdl-navigation__link" href="">Pop</a>
+				<a class="mdl-navigation__link" href="">Instrumental</a>
 				<a class="mdl-navigation__link" href="">Other music...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MOVIE</span>
@@ -112,7 +116,7 @@
 		<!-- DrawerENDS -->
 
 		<!-- Content for each tab -->
-		<main class="mdl-layout__content">
+		<main class="mdl-layout__content" >
 
 			<!-- TAB1 -->
 			<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
@@ -209,50 +213,67 @@
 					<br>
 					<br>
 					<center>
-						<!-- Wide card with share menu button -->
 						<style>
-							.demo-card-wide.mdl-card {
+							.feature-card-wide.mdl-card {
 								width: 512px;
 							}
 
-							.demo-card-wide>.mdl-card__title {
-								color: #fff;
-								height: 176px;
-								background: url('https://getmdl.io//assets/demos/welcome_card.jpg') center / cover;
+							.feature-card-wide>.mdl-card__title {
+								color: #ffffff;
+								height: 88px;
+								background: #EC407A;
 							}
 
-							.demo-card-wide>.mdl-card__menu {
+							.feature-card-wide>.mdl-card__menu {
 								color: #fff;
 							}
 						</style>
 
-						<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+						<div class="feature-card-wide mdl-card mdl-shadow--16dp">
 							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">Welcome</h2>
+								<h2 class="mdl-card__title-text">Features</h2>
 							</div>
-							<div class="mdl-card__supporting-text" align="left">
-								This is the home page.
-							</div>
-							<div class="mdl-card__actions mdl-card--border">
-								<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-									Get Started
-								</a>
-							</div>
-							<div class="mdl-card__menu">
-								<!-- Right aligned menu below button -->
-								<button id="share-menu" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-									<i class="material-icons">share</i>
-								</button>
+							<!-- Textfield with Floating Label -->
 
-								<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-menu">
-									<li class="mdl-menu__item">Share with friends!</li>
-									<li disabled class="mdl-menu__item">Disabled Action</li>
-									<li class="mdl-menu__item">Another Action</li>
-								</ul>
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="sample3">
+									<label class="mdl-textfield__label" for="sample3">YouTube Link</label>
+								</div>
+							</form>
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="sample3">
+									<label class="mdl-textfield__label" for="sample3">Your description or comments:</label>
+								</div>
+							</form>
+							<form action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="sample3">
+									<label class="mdl-textfield__label" for="sample3">Your name</label>
+								</div>
+							</form>
+							<!-- Left aligned menu on top of button  -->
+							<button id="demo-menu-top-left"
+											class="mdl-button mdl-js-button mdl-button--icon">
+								<i class="material-icons">more_vert</i>
+							</button>
 
-							</div>
+							<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
+									data-mdl-for="demo-menu-top-left">
+								<li class="mdl-menu__item">Soccer</li>
+								<li class="mdl-menu__item">Football</li>
+								<li disabled class="mdl-menu__item">Pop</li>
+								<li class="mdl-menu__item">Classical</li>
+							</ul>
+
+							<!-- Accent-colored raised button with ripple -->
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+								Submit
+							</button>
+
 						</div>
-
+					</center>
 
 						<!-- Your content ENDS -->
 				</div>
@@ -338,6 +359,19 @@
 										<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">build</i></a>
 										</span>
 									</li>
+									<li class="mdl-list__item mdl-list__item--three-line">
+										<span class="mdl-list__item-primary-content">
+											<i class="material-icons  mdl-list__item-avatar">person_pin_circle</i>
+											<span>Ethan Rahman</span>
+										<span class="mdl-list__item-text-body">
+												Into econ and cs.
+											</span>
+										</span>
+										<span class="mdl-list__item-secondary-content">
+											<span class="mdl-list__item-secondary-info">Backend</span>
+										<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">power</i></a>
+										</span>
+									</li>
 								</ul>
 							</div>
 							<div class="mdl-card__supporting-text">
@@ -400,7 +434,8 @@
 							<br>
 							<div class="mdl-card__actions mdl-card--border">
 								<a href="https://github.com/google/material-design-lite" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect github">
-									<i class="material-icons">link</i> Github Link
+									<i class="material-icons">link</i>
+									Github Link
 								</a>
 							</div>
 						</div>
@@ -428,7 +463,7 @@
 				</div>
 				<div class="mdl-mega-footer--bottom-section">
 					<div class="mdl-logo">
-						<b>Made with ❤ at Illinois</b> 
+						<b>Made with ❤ at Illinois</b>
 					</div>
 					<ul class="mdl-mega-footer--link-list">
 						<li><a href="https://github.com/CS196Illinois">CS196 @ UIUC</a></li>

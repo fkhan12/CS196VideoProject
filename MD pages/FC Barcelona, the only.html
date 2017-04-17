@@ -5,36 +5,36 @@
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+<style>
+a {
+	text-decoration: none;
+}
+</style>
+
 <head>
-	<title>Soccer</title>
+	<title>Video</title>
 <!-- 	<style> -->
 <!-- 		 -->
 <!-- 	</style> -->
 </head>
 
 <body>
-	<!-- Master View -->
-	<!-- The drawer is always open in large screens. The header is always shown,
-		even in small screens. -->
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+	<!-- Always shows a header, even in smaller screens. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 		<header class="mdl-layout__header">
 			<div class="mdl-layout__header-row">
-				<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" href="index.html">
+				<!-- Home Button -->
+				<a href="index.html" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-button--accent mdl-js-ripple-effect github">
 					<i class="material-icons">home</i>
-				</button>
-				<div class="mdl-layout-spacer">
-				</div>
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-										mdl-textfield--floating-label mdl-textfield--align-right">
-					<label class="mdl-button mdl-js-button mdl-button--icon"
-								 for="fixed-header-drawer-exp">
-						<i class="material-icons">search</i>
-					</label>
-					<div class="mdl-textfield__expandable-holder">
-						<input class="mdl-textfield__input" type="text" name="sample"
-									 id="fixed-header-drawer-exp">
-					</div>
-				</div>
+				</a>
+				<!-- Home Button ENDS -->
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation. We hide it in small screens. -->
+				<!-- Title -->
+				<center><span class="mdl-layout-title">FC Barcelona, the only club still alive in three Champions League competitions</span></center>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
 			</div>
 		</header>
 		
@@ -59,7 +59,7 @@
 			}
 			</style>
 			
-			<span class="mdl-layout-title">Categories</span>
+			<span class="mdl-layout-title"><b>Categories</b></span>
 			
 			<nav class="mdl-navigation">
 				<div class="cate-drawer-separator"></div>
@@ -70,9 +70,9 @@
 				<a class="mdl-navigation__link" href="">Other sports...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MUSIC</span>
-				<a class="mdl-navigation__link" href="">Pop</a>
 				<a class="mdl-navigation__link" href="">Classical</a>
-				<a class="mdl-navigation__link" href="">Rock</a>
+				<a class="mdl-navigation__link" href="">Pop</a>
+				<a class="mdl-navigation__link" href="">Instrumental</a>
 				<a class="mdl-navigation__link" href="">Other music...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MOVIE</span>
@@ -88,14 +88,28 @@
 		<!-- DrawerENDS -->
 		
 		<main class="mdl-layout__content">
-			<div class="page-content">
+			<div class="page-content" align="center">
 			<!-- Your content goes here -->
+				<style>
+				.demo-card-image.mdl-card {
+					width: 960px;
+					height: 540px;
+				}
+				</style>
+
+				<br>
+				<br>
+				<div class="demo-card-image mdl-card mdl-shadow--16dp">
+					<iframe id="ytplayer" type="text/html" width="960" height="540"
+					src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&rel=0&showinfo=0"
+					frameborder="1" allowfullscreen>
+					</iframe>
+
+				</div>
 				
-			<!-- Your content ENDS -->
 			</div>
 		</main>
 	</div>
-	<!-- Master View ENDS -->
-	
 </body>
+
 </html>
