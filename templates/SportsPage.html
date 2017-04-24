@@ -61,19 +61,13 @@ body {
 <h1 align="center">Post Videos About Sports Here!</h1>
 </header>
 
-<!--
-{% block content %}
-<form action="" method="post" name="api">
-	{{title(size=40)}}<br>
-	<input type="text" name="Title"><br>
-	{{field(size=40)}}<br>
-	<input type="text" name="Field"><br>
-	{{url(size=40)}}<br>
-	<input type="text" name="URL"><br>
+<form method="POST" action="/send">
+	Username:<br>
+	<input type="text" name="username"><br>
+	Comment:<br>
+	<input type="text" name="comment"><br>
 	<input type="submit" value="Submit">
 </form>
-{% end block %}
--->
 
 {% block content %}
 	<h3> Complete below</h3>
