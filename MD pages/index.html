@@ -8,20 +8,91 @@
 
 
 <head>
-	<title>SOCCER CATEGORY</title>
-	<!-- 	<style> -->
-	<!-- 		 -->
-	<!-- 	</style> -->
+	<title>Project - Video Sharing!</title>
 </head>
 
+
 <style>
-	#body {
+	body {
 		width: 100%;
 		height: 100%;
+		font-family: 'Roboto';
+	}
+
+	.cate-drawer-separator {
+		height: 1px;
+		background-color: #dcdcdc;
+		margin: 8px 0;
+	}
+
+	.cate-drawer .mdl-navigation__link.mdl-navigation__link {
+		font-size: 14px;
+		color: #757575;
+	}
+
+	.cate-drawer span.mdl-navigation__link.mdl-navigation__link {
+		color: #3f51b5;
+		font-weight: bold;
+	}
+
+	.demo-card-wide.mdl-card {
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.demo-card-wide>.mdl-card__title {
+		color: #fff;
+		height: 176px;
+		background: url('https://getmdl.io//assets/demos/welcome_card.jpg') center / cover;
+	}
+
+	.demo-card-wide>.mdl-card__menu {
+		color: #fff;
+	}
+
+	.feature-card-wide.mdl-card {
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.feature-card-wide>.mdl-card__title {
+		color: #ffffff;
+		height: 188px;
+		background: #EC407A;
+	}
+
+	.feature-card-wide>.mdl-card__menu {
+		color: #fff;
+	}
+	
+	.demo-list-three {
+		width: 400px;
+	}
+
+	#welcomeTitle {
+		background: url('https://assets.materialup.com/uploads/54ab9316-6e9c-4b00-9091-56facd71b888/telescope.jpg') center / cover;
+	}
+
+	#featureTitle {
+		background: url('https://getmdl.io//assets/demos/welcome_card.jpg') center / cover;
+	}
+
+	#submitTitle {
+		background: url('https://s-media-cache-ak0.pinimg.com/originals/80/7d/2d/807d2d4c8009e4118c29861b2eccf81e.jpg') center / cover;
+	}
+
+	#aboutTitle {
+		background: url('https://assets.materialup.com/uploads/e232b91a-bf20-405c-a126-f337a55a9b93/preview.png') center / cover;
+	}
+
+	#githubTitle {
+		background: url('https://s-media-cache-ak0.pinimg.com/736x/0f/2c/68/0f2c684e65d8d03b896ccb5fde41d0ba.jpg') center / cover;
 	}
 </style>
 
-<body  id="body">
+<body id="body">
 	<!-- Master View -->
 	<!-- Simple header with scrollable tabs. -->
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -37,10 +108,13 @@
 				</span>
 				<!-- Title ENDS -->
 
+				<!-- Spacer -->
 				<div class="mdl-layout-spacer">
 				</div>
+				<!-- Spacer ENDS -->
 
 				<!-- Search Button -->
+				<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Add function to this button!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
 					<label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
 						<i class="material-icons">search
@@ -71,22 +145,6 @@
 		<!-- Drawer -->
 		<div class="cate-drawer mdl-layout__drawer">
 
-			<style>
-				.cate-drawer-separator {
-					height: 1px;
-					background-color: #dcdcdc;
-					margin: 8px 0;
-				}
-				.cate-drawer .mdl-navigation__link.mdl-navigation__link {
-					font-size: 14px;
-					color: #757575;
-				}
-				.cate-drawer span.mdl-navigation__link.mdl-navigation__link {
-					color: #3f51b5;
-					font-weight: bold;
-				}
-			</style>
-
 			<span class="mdl-layout-title"><b>Categories</b></span>
 
 			<nav class="mdl-navigation">
@@ -116,125 +174,84 @@
 		<!-- DrawerENDS -->
 
 		<!-- Content for each tab -->
-		<main class="mdl-layout__content" >
+		<main class="mdl-layout__content">
 
-			<!-- TAB1 -->
+			<!-- Home TAB -->
 			<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
 				<div class="page-content">
-					<!-- Your content goes here -->
+					<!-- Home TAB content goes here -->
 					<br>
 					<br>
 					<br>
-					<center>
-						<!-- Wide card with share menu button -->
-						<style>
-							.demo-card-wide.mdl-card {
-								width: 512px;
-							}
-
-							.demo-card-wide>.mdl-card__title {
-								color: #fff;
-								height: 176px;
-								background: url('https://getmdl.io//assets/demos/welcome_card.jpg') center / cover;
-							}
-
-							.demo-card-wide>.mdl-card__menu {
-								color: #fff;
-							}
-						</style>
-
-						<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">Welcome</h2>
-							</div>
-							<div class="mdl-card__supporting-text" align="left">
-								This is the home page.<br> To start exploring videos, click the drawer button on the top left!
-							</div>
-							<div class="mdl-card__actions mdl-card--border">
-								<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+					<!-- Welcome card with share menu button -->
+					<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+						<div class="mdl-card__title" id="welcomeTitle">
+							<h2 class="mdl-card__title-text">Welcome</h2>
+						</div>
+						<div class="mdl-card__supporting-text" align="left">
+							This is the home page.<br> To start exploring videos, click the drawer button on the top left!
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 									Get Started
 								</a>
-							</div>
-							<div class="mdl-card__menu">
-								<!-- Right aligned menu below button -->
-								<button id="share-menu" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-									<i class="material-icons">share</i>
-								</button>
-
-								<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-menu">
-									<li class="mdl-menu__item">Share with friends!</li>
-									<li disabled class="mdl-menu__item">Disabled Action</li>
-									<li class="mdl-menu__item">Another Action</li>
-								</ul>
-
-							</div>
 						</div>
-					</center>
-
+						
+						<!-- Share menu button -->
+						<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Add function to this button!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+						<div class="mdl-card__menu">
+							<button id="share-menu" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+								<i class="material-icons">share</i>
+							</button>
+							<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-menu">
+								<li class="mdl-menu__item">Share with friends!</li>
+								<li disabled class="mdl-menu__item">Disabled Action</li>
+								<li class="mdl-menu__item">Another Action</li>
+							</ul>
+						</div>
+						<!-- Share menu button ENDS-->
+						
+					</div>
+					<!-- Welcome card with share menu button ENDS -->
+					
 					<br>
 					<br>
-					<center>
-						<style>
-							.feature-card-wide.mdl-card {
-								width: 512px;
-							}
 
-							.feature-card-wide>.mdl-card__title {
-								color: #ffffff;
-								height: 188px;
-								background: #EC407A;
-							}
-
-							.feature-card-wide>.mdl-card__menu {
-								color: #fff;
-							}
-						</style>
-
-						<div class="feature-card-wide mdl-card mdl-shadow--2dp">
-							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">Features</h2>
-							</div>
-							<div class="mdl-card__supporting-text" align="left">
-								We want our website to be a platform for people to share and comment on their favorite YouTube videos.
-							</div>
+					<!-- Feature card with share menu button -->
+					<div class="feature-card-wide mdl-card mdl-shadow--16dp">
+						<div class="mdl-card__title" id="featureTitle">
+							<h2 class="mdl-card__title-text">Features</h2>
 						</div>
-					</center>
-
-					<!-- Your content ENDS -->
+						<div class="mdl-card__supporting-text" align="left">
+							We want our website to be a platform for people to share and comment on their favorite YouTube videos.
+						</div>
+					</div>
+					<!-- Feature card with share menu button ENDS -->
+					
+					<!-- Home TAB content ENDS -->
 				</div>
 			</section>
-			<!-- TAB1 ENDS -->
+			<!-- Home TAB ENDS -->
 
-			<!-- TAB2 -->
+			<!-- Upload TAB -->
 			<section class="mdl-layout__tab-panel" id="scroll-tab-2">
 				<div class="page-content">
-					<!-- Your content goes here -->
+					<!-- Upload TAB content goes here -->
 					<br>
 					<br>
 					<br>
-					<center>
-						<style>
-							.feature-card-wide.mdl-card {
-								width: 512px;
-							}
-
-							.feature-card-wide>.mdl-card__title {
-								color: #ffffff;
-								height: 88px;
-								background: #EC407A;
-							}
-
-							.feature-card-wide>.mdl-card__menu {
-								color: #fff;
-							}
-						</style>
-
-						<div class="feature-card-wide mdl-card mdl-shadow--16dp">
-							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">Features</h2>
-							</div>
-							<!-- Textfield with Floating Label -->
-
+					
+					<!-- Upload card -->
+					<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+					
+						<!-- Card title -->
+						<div class="mdl-card__title" id="submitTitle">
+							<h2 class="mdl-card__title-text">Submit your favorite!</h2>
+						</div>
+						<!-- Card title ENDS -->
+						
+						<!-- Video info -->
+						<div class="mdl-card__supporting-text mdl-card--border" align="center">
 							<form action="#">
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 									<input class="mdl-textfield__input" type="text" id="sample3">
@@ -253,73 +270,113 @@
 									<label class="mdl-textfield__label" for="sample3">Your name</label>
 								</div>
 							</form>
-							<!-- Left aligned menu on top of button  -->
-							<button id="demo-menu-top-left"
-											class="mdl-button mdl-js-button mdl-button--icon">
-								<i class="material-icons">more_vert</i>
-							</button>
-
-							<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
-									data-mdl-for="demo-menu-top-left">
-								<li class="mdl-menu__item">Soccer</li>
-								<li class="mdl-menu__item">Football</li>
-								<li disabled class="mdl-menu__item">Pop</li>
-								<li class="mdl-menu__item">Classical</li>
-							</ul>
-
-							<!-- Accent-colored raised button with ripple -->
-							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-								Submit
-							</button>
-
 						</div>
-					</center>
-
-						<!-- Your content ENDS -->
+						<!-- Video info ENDS -->
+						
+						<!-- Upload Category Options -->
+						<div class="mdl-card__supporting-text">
+							<!-- Left section of category options -->
+							<div id="c1" style="float: left; width:50%;">
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Football">
+									<input type="radio" id="option-Football" class="mdl-radio__button" name="options" value="Football" checked>
+									<span class="mdl-radio__label">Football</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Soccer">
+									<input type="radio" id="option-Soccer" class="mdl-radio__button" name="options" value="Soccer">
+									<span class="mdl-radio__label">Soccer</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Basketball">
+									<input type="radio" id="option-Basketball" class="mdl-radio__button" name="options" value="Basketball">
+									<span class="mdl-radio__label">Basketball</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Other sports">
+									<input type="radio" id="option-Other sports" class="mdl-radio__button" name="options" value="Other musicOther sports">
+									<span class="mdl-radio__label">Other sports</span>
+								</label><br>
+								<br>
+								<br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Classical">
+									<input type="radio" id="option-Classical" class="mdl-radio__button" name="options" value="Classical">
+									<span class="mdl-radio__label">Classical</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Pop">
+									<input type="radio" id="option-Pop" class="mdl-radio__button" name="options" value="Pop">
+									<span class="mdl-radio__label">Pop</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Instrumental">
+									<input type="radio" id="option-Instrumental" class="mdl-radio__button" name="options" value="Instrumental">
+									<span class="mdl-radio__label">Instrumental</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Other music">
+									<input type="radio" id="option-Other music" class="mdl-radio__button" name="options" value="Other music">
+									<span class="mdl-radio__label">Other music</span>
+								</label><br>
+							</div>
+							<!-- Left section of category options ENDS -->
+							
+							<!-- Right section of category options -->
+							<div id="c2" style="float: right; width:50%;">
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Action">
+									<input type="radio" id="option-Action" class="mdl-radio__button" name="options" value="Action">
+									<span class="mdl-radio__label">Action</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Comedy">
+									<input type="radio" id="option-Comedy" class="mdl-radio__button" name="options" value="Comedy">
+									<span class="mdl-radio__label">Comedy</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Documentary">
+									<input type="radio" id="option-Documentary" class="mdl-radio__button" name="options" value="Documentary">
+									<span class="mdl-radio__label">Documentary</span>
+								</label><br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-Other movie">
+									<input type="radio" id="option-Other movie" class="mdl-radio__button" name="options" value="Other movie">
+									<span class="mdl-radio__label">Other movie</span>
+								</label><br>
+								<br>
+								<br>
+								<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-others">
+									<input type="radio" id="option-others" class="mdl-radio__button" name="options" value="others">
+									<span class="mdl-radio__label">OTHERS</span>
+								</label><br>
+							</div>
+							<!-- Right section of category options ENDS -->
+						</div>
+						<!-- Upload Category Options ENDS -->
+						
+						<!-- Submit button -->
+						<div class="mdl-card__actions mdl-card--border">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Submit!</a>
+						</div>
+						<!-- Submit button ENDS -->
+						
+					</div>
+					<!-- Upload card ENDS -->
+					
+					<!-- Upload TAB content ENDS -->
 				</div>
 			</section>
-			<!-- TAB2 ENDS -->
+			<!-- Upload TAB ENDS -->
 
-			<!-- TAB3 -->
+			<!-- About TAB -->
 			<section class="mdl-layout__tab-panel" id="scroll-tab-3">
 				<div class="page-content">
-					<!-- Your content goes here -->
-
-					<!-- Wide card with share menu button -->
-					<style>
-						.demo-card-wide.mdl-card {
-							width: 512px;
-						}
-
-						.demo-card-wide>.mdl-card__title {
-							color: #fff;
-							height: 176px;
-							background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
-						}
-
-						.demo-card-wide>.mdl-card__menu {
-							color: #fff;
-						}
-					</style>
-
+					<!-- About TAB content goes here -->
 					<br>
 					<br>
 					<br>
-
 					<center>
-						<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-							<div class="mdl-card__title">
+						<!-- About card -->
+						<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+							<!-- Card title -->
+							<div class="mdl-card__title" id="aboutTitle">
 								<h2 class="mdl-card__title-text">Our team!</h2>
 							</div>
+							<!-- Card title ENDS -->
+							
 							<div class="mdl-card__supporting-text">
 								<!-- Three Line List with secondary info and action -->
-								<style>
-									.demo-list-three {
-										width: 400px;
-									}
-								</style>
-
 								<ul class="demo-list-three mdl-list">
+									<!-- Member1 -->
 									<li class="mdl-list__item mdl-list__item--three-line">
 										<span class="mdl-list__item-primary-content">
 											<i class="material-icons mdl-list__item-avatar">music_note</i>
@@ -333,6 +390,9 @@
 										<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">palette</i></a>
 										</span>
 									</li>
+									<!-- Member1 ENDS -->
+									
+									<!-- Member2 -->
 									<li class="mdl-list__item mdl-list__item--three-line">
 										<span class="mdl-list__item-primary-content">
 											<i class="material-icons  mdl-list__item-avatar">pool</i>
@@ -346,6 +406,9 @@
 										<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">texture</i></a>
 										</span>
 									</li>
+									<!-- Member2 ENDS -->
+
+									<!-- Member3 -->
 									<li class="mdl-list__item mdl-list__item--three-line">
 										<span class="mdl-list__item-primary-content">
 											<i class="material-icons  mdl-list__item-avatar">beach_access</i>
@@ -359,6 +422,9 @@
 										<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">build</i></a>
 										</span>
 									</li>
+									<!-- Member3 ENDS -->
+									
+									<!-- Member4 -->
 									<li class="mdl-list__item mdl-list__item--three-line">
 										<span class="mdl-list__item-primary-content">
 											<i class="material-icons  mdl-list__item-avatar">person_pin_circle</i>
@@ -372,82 +438,78 @@
 										<a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">power</i></a>
 										</span>
 									</li>
+									<!-- Member4 ENDS -->
 								</ul>
+								<!-- Three Line List with secondary info and action ENDS -->
 							</div>
-							<div class="mdl-card__supporting-text">
-								This website is still under construction...
-							</div>
+							<div class="mdl-card__supporting-text">This website is still under construction...</div>
+							
+							<!-- Spinner -->
 							<div class="mdl-spinner mdl-js-spinner is-active"></div>
-							<div class="mdl-card__supporting-text">
-								If you have any problems or advice, please feel free to tell us.
-								<br> We're here to listen! :)
-							</div>
+							<!-- Spinner ENDS -->
+							
+							<div class="mdl-card__supporting-text">If you have any problems or advice, please feel free to tell us.<br>
+							We're here to listen! :)</div>
+							
 							<br>
 							<br>
+							
+							<!-- Contact us button -->
 							<div class="mdl-card__actions mdl-card--border">
 								<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 									Contact Us!
 								</a>
+							<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Add function to this button!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 							</div>
+							<!-- Contact us button ENDS -->
 						</div>
+						<!-- About card ENDS -->
+						
 					</center>
-
-					<!-- Your content ENDS -->
+					
+					<!-- About TAB content ENDS -->
 				</div>
 			</section>
-			<!-- TAB3 ENDS -->
+			<!-- About TAB ENDS -->
 
-			<!-- TAB4 -->
+			<!-- Github TAB -->
 			<section class="mdl-layout__tab-panel" id="scroll-tab-4">
 				<div class="page-content">
-					<!-- Your content goes here -->
-					<!-- Wide card with share menu button -->
-					<style>
-						.demo-card-wide.mdl-card {
-							width: 512px;
-						}
-
-						.demo-card-wide>.mdl-card__title {
-							color: #fff;
-							height: 176px;
-							background: url('https://getmdl.io//assets/demos/welcome_card.jpg') center / cover;
-						}
-
-						.demo-card-wide>.mdl-card__menu {
-							color: #fff;
-						}
-					</style>
-
+					<!-- Github TAB content goes here -->
+					
 					<br>
 					<br>
 					<br>
-
-					<center>
-						<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text">We use Github!</h2>
-							</div>
-							<br>
-							<div class="mdl-card__supporting-text" align="left">
-								We are doing this project as a student group.<br> Our github page is posted here. If you are someone who's starting their own project, feel free to take a look and play with it if you want. (We won't be mad!)
-							</div>
-							<br>
-							<div class="mdl-card__actions mdl-card--border">
-								<a href="https://github.com/google/material-design-lite" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect github">
-									<i class="material-icons">link</i>
-									Github Link
-								</a>
-							</div>
+					
+					<!-- Github card -->
+					<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+						<div class="mdl-card__title" id="githubTitle">
+							<h2 class="mdl-card__title-text">We use Github!</h2>
 						</div>
-					</center>
+						<div class="mdl-card__supporting-text" align="left">
+							We are doing this project as a student group.<br> Our github page is posted here. If you are someone who's starting their own project, feel free to take a look and play with it if you want. (We won't be mad!)
+						</div>
+						
+						<!-- Github link -->
+						<div class="mdl-card__actions mdl-card--border" align="center">
+							<a href="https://github.com/google/material-design-lite" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect github">
+								<i class="material-icons">link</i> Github Link
+							</a>
+						</div>
+						<!-- Github link ENDS -->
+						
+					</div>
+					<!-- Github card ENDS -->
 
-					<!-- Your content ENDS -->
+					<!-- Github TAB content ENDS -->
 				</div>
 			</section>
-			<!-- TAB4 ENDS -->
+			<!-- Github TAB ENDS -->
 
 			<br>
 			<br>
+			
+			<!-- Footer -->
 			<footer class="mdl-mega-footer">
 				<div class="mdl-mega-footer--middle-section">
 					<div class="mdl-mega-footer--drop-down-section">
@@ -470,9 +532,10 @@
 					</ul>
 				</div>
 			</footer>
+			<!-- Footer ENDS-->
 
 		</main>
-		<!-- Content for each tab ends-->
+		<!-- Content for each tab ENDS-->
 
 	</div>
 	<!-- Master View ENDS -->

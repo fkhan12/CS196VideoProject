@@ -3,64 +3,112 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-<style>
-a {
-	text-decoration: none;
-}
-</style>
 
 <head>
-	<title>Video</title>
-<!-- 	<style> -->
-<!-- 		 -->
-<!-- 	</style> -->
+	<title>FC Barcelona, the only club still alive in three Champions League competitions</title>
 </head>
+
+
+<style>
+	body {
+		width: 100%;
+		height: 100%;
+		font-family: 'Roboto';
+	}
+
+	.cate-drawer-separator {
+		height: 1px;
+		background-color: #dcdcdc;
+		margin: 8px 0;
+	}
+
+	.cate-drawer .mdl-navigation__link.mdl-navigation__link {
+		font-size: 14px;
+		color: #757575;
+	}
+
+	.cate-drawer span.mdl-navigation__link.mdl-navigation__link {
+		color: #3f51b5;
+		font-weight: bold;
+	}
+
+	.demo-card-image.mdl-card {
+		width: 960px;
+		height: 540px;
+	}
+
+	.demo-card-wide.mdl-card {
+		width: 960px;
+	}
+
+	.demo-card-wide>.mdl-card__menu {
+		color: #fff;
+	}
+
+	.demo-card-wide>.mdl-card__title {
+		color: #fff;
+		height: 66px;
+		background: #3949AB;
+	}
+
+	#addTitle {
+		background: #EC407A;
+	}
+
+	#displayTitle {
+		background: #FFA726;
+	}
+
+	#submitButton {
+		width: 90px;
+	}
+</style>
+
 
 <body>
 	<!-- Always shows a header, even in smaller screens. -->
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<!-- Header -->
 		<header class="mdl-layout__header">
 			<div class="mdl-layout__header-row">
+			
 				<!-- Home Button -->
 				<a href="index.html" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-button--accent mdl-js-ripple-effect github">
 					<i class="material-icons">home</i>
 				</a>
 				<!-- Home Button ENDS -->
-				<!-- Add spacer, to align navigation to the right -->
+				
 				<div class="mdl-layout-spacer"></div>
-				<!-- Navigation. We hide it in small screens. -->
-				<!-- Title -->
-				<center><span class="mdl-layout-title">FC Barcelona, the only club still alive in three Champions League competitions</span></center>
-				<!-- Add spacer, to align navigation to the right -->
+				
+				<span class="mdl-layout-title">FC Barcelona, the only club still alive in three Champions League competitions</span>
+				
 				<div class="mdl-layout-spacer"></div>
+				
+				<!-- Search Button -->
+				<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Add function to this button!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+										mdl-textfield--floating-label mdl-textfield--align-right">
+					<label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+						<i class="material-icons">search</i>
+					</label>
+					<div class="mdl-textfield__expandable-holder">
+						<input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+					</div>
+				</div>
+				<!-- Search Button ENDS-->
+				
 			</div>
 		</header>
-		
+		<!-- Header ENDS -->
+
 		<!-- Drawer -->
 		<div class="cate-drawer mdl-layout__drawer">
-		
-			<style>
-			.cate-drawer-separator {
-					height: 1px;
-					background-color: #dcdcdc;
-					margin: 8px 0;
-			}
-				
-			.cate-drawer .mdl-navigation__link.mdl-navigation__link {
-				font-size: 14px;
-				color: #757575;
-			}
 
-			.cate-drawer span.mdl-navigation__link.mdl-navigation__link {
-				color: #3f51b5;
-				font-weight: bold;
-			}
-			</style>
-			
 			<span class="mdl-layout-title"><b>Categories</b></span>
-			
+
 			<nav class="mdl-navigation">
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">SPORTS</span>
@@ -83,32 +131,112 @@ a {
 				<div class="cate-drawer-separator"></div>
 				<a class="mdl-navigation__link" href="">Others</a>
 			</nav>
-			
+
 		</div>
 		<!-- DrawerENDS -->
 		
+		<!-- Main content -->
 		<main class="mdl-layout__content">
 			<div class="page-content" align="center">
-			<!-- Your content goes here -->
-				<style>
-				.demo-card-image.mdl-card {
-					width: 960px;
-					height: 540px;
-				}
-				</style>
-
-				<br>
-				<br>
-				<div class="demo-card-image mdl-card mdl-shadow--16dp">
-					<iframe id="ytplayer" type="text/html" width="960" height="540"
-					src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&rel=0&showinfo=0"
-					frameborder="1" allowfullscreen>
-					</iframe>
-
-				</div>
+			
+				<!-- Your content goes here -->
 				
+				<br>
+				<br>
+				
+				<!-- YouTube Player card -->
+				<div class="demo-card-image mdl-card mdl-shadow--16dp">
+					<iframe id="ytplayer" type="text/html" width="960" height="540" src="https://www.youtube.com/embed/9UEvvTecTWo?enablejsapi=1&rel=0&showinfo=0" https://www.youtube.com/watch?v=9UEvvTecTWo frameborder="1" allowfullscreen>
+					</iframe>
+				</div>
+				<!-- YouTube Player card ENDS -->
+				
+				<br>
+				<br>
+
+				<!-- Info card with like and dislike -->
+				<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+					<div class="mdl-card__title">
+						<h2 class="mdl-card__title-text">FC Barcelona, the only club still alive in three Champions League competitions</h2>
+					</div>
+					<div class="mdl-card__supporting-text" align="left">
+						Video Profile: (Likes; Uploader name; Upload date; etc.)<br>
+						<br> And uploader's description.
+					</div>
+					
+					<!-- Like and dislike button -->
+					<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Add function to this button!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+					<div class="mdl-card__menu">
+						<!-- Right aligned menu below button -->
+						<button id="share-menu" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">plus_one</i>
+						</button>
+						<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-menu">
+							<li class="mdl-menu__item">Like</li>
+							<li class="mdl-menu__item">Dislike</li>
+						</ul>
+					</div>
+					<!-- Like and dislike button ENDS-->
+					
+				</div>
+				<!-- Info card with like and dislike ENDS -->
+
+				<br>
+				<br>
+
+				<!-- Add comment card -->
+				<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+					<div class="mdl-card__title" id="addTitle">
+						<h2 class="mdl-card__title-text">Add your comment:</h2>
+					</div>
+					<div class="mdl-card__supporting-text" align="left">
+						<!-- Simple Textfield -->
+						<form action="#">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="text" id="sample1">
+								<label class="mdl-textfield__label" for="sample1">Your name:</label>
+							</div>
+						</form>
+						<form action="#">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="mdl-textfield__input" type="text" id="sample1">
+								<label class="mdl-textfield__label" for="sample1">Add comment:</label>
+							</div>
+						</form>
+						<!-- Simple Textfield ENDS -->
+					</div>
+					<div class="mdl-card__actions mdl-card--border" align="left">
+						<button class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" id="submitButton">
+							Submit
+						</button>
+					</div>
+				</div>
+				<!-- Add comment card ENDS -->
+
+				<br>
+				<br>
+
+				<!-- Display comment card -->
+				<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+					<div class="mdl-card__title" id="displayTitle">
+						<h2 class="mdl-card__title-text">Comments from other people:</h2>
+					</div>
+					<div class="mdl-card__supporting-text" align="left">
+					<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Needs implement here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+					</div>
+				</div>
+				<!-- Display comment card ENDS -->
+
+				<br>
+				<br>
+				
+			<!-- Your content ends here -->
 			</div>
 		</main>
+		<!-- Main content ENDS -->
+		
 	</div>
 </body>
 
