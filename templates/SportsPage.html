@@ -61,11 +61,13 @@ body {
 <h1 align="center">Post Videos About Sports Here!</h1>
 </header>
 
-<form method="POST" action="/send">
+<form method="POST" action="{{ url_for('addrec') }}" name="post_comment">
 	Username:<br>
-	<input type="text" name="username"><br>
+	<input type="text" name="name"><br>
 	Comment:<br>
-	<input type="text" name="comment"><br>
+	<input type="text" name="url"><br>
+	Category:<br>
+	<input type="text" name="category"><br>
 	<input type="submit" value="Submit">
 </form>
 
