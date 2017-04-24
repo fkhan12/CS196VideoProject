@@ -63,12 +63,12 @@ body {
 
 <form method="POST" action="{{ url_for('addrec') }}" name="post_comment">
 	Username:<br>
-	<input type="text" name="name"><br>
+	<input type="text" name="name" /><br>
 	Comment:<br>
-	<input type="text" name="url"><br>
+	<input type="text" name="url" /><br>
 	Category:<br>
-	<input type="text" name="category"><br>
-	<input type="submit" value="Submit">
+	<input type="text" name="category" /><br>
+	<input type="submit" value="Submit" />
 </form>
 
 {% block content %}
