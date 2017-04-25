@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<table border = 1>
+			<thead>
+				<td>Username</td>
+				<td>Url</td>
+				<td>Category</td>
+			</thead>
+			
+			{% for row in rows %}
+				<tr>
+					<td>{{ row["name"] }}</td>
+					<td>{{ row["url"] }}</td>
+					<td>{{ row["category"] }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+		<a href = "/"> Go back to home page</a>
+	</body>
+</html>
