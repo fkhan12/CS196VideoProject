@@ -65,6 +65,13 @@
 	#submitButton {
 		width: 90px;
 	}
+	
+	#home {
+			position: absolute;
+			right: 40px;
+			bottom: 36px;
+	}
+	
 </style>
 
 
@@ -76,7 +83,7 @@
 			<div class="mdl-layout__header-row">
 			
 				<!-- Home Button -->
-				<a href="index.html" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-button--accent mdl-js-ripple-effect github">
+				<a href="index.html" id="home" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-button--accent mdl-js-ripple-effect mdl-shadow--16dp">
 					<i class="material-icons">home</i>
 				</a>
 				<!-- Home Button ENDS -->
@@ -154,22 +161,56 @@
 				<br>
 				<br>
 
+
 				<!-- Info card with like and dislike -->
 				<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+					
+					<!-- Card title -->
 					<div class="mdl-card__title">
 						<h2 class="mdl-card__title-text">FC Barcelona, the only club still alive in three Champions League competitions</h2>
 					</div>
+					<!-- Card title ENDS -->
+					
+					<!-- Card description section -->
 					<div class="mdl-card__supporting-text" align="left">
-						Video Profile: (Likes; Uploader name; Upload date; etc.)<br>
-						<br> And uploader's description.
+						
+						<!-- Description Text -->
+						<div class="mdl-card__supporting-text">
+							The first team, the women’s team and the U19s remain alive in Europe’s premier club tournament<br>
+							----<br>
+							FC Barcelona on Social Media
+							Subscribe to our official channel http://www.youtube.com/subscription_c...
+							Facebook: http://www.facebook.com/fcbarcelona
+							Twitter: http://twitter.com/FCBarcelona
+							Google+: http://plus.google.com/+FCBarcelona
+							Instagram: http://www.instagram.com/FCBarcelona
+						</div>
+						<!-- Description Text ENDS -->
+						
+						<!-- Information tag -->
+						<div class="mdl-card__actions mdl-card--border">
+							<span class="mdl-chip mdl-chip--contact mdl-shadow--4dp">
+								<img class="mdl-chip__contact" src="https://getmdl.io/templates/dashboard/images/user.jpg"></img>
+								<span class="mdl-chip__text">Uploader: FC Barcelona Offical</span>
+							</span>
+							<span class="mdl-chip mdl-shadow--4dp">
+								<span class="mdl-chip__text">Uploaded on Mar 30, 2017</span>
+							</span>
+							<span class="mdl-chip mdl-shadow--4dp">
+								<span class="mdl-chip__text">512 likes</span>
+							</span>
+						</div>
+						<!-- Information tag ENDS -->
+						
 					</div>
+					<!-- Card description section ENDS -->
 					
 					<!-- Like and dislike button -->
 					<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Add function to this button!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 					<div class="mdl-card__menu">
 						<!-- Right aligned menu below button -->
 						<button id="share-menu" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-							<i class="material-icons">plus_one</i>
+							<i class="material-icons">thumbs_up_down</i>
 						</button>
 						<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="share-menu">
 							<li class="mdl-menu__item">Like</li>
@@ -181,16 +222,19 @@
 				</div>
 				<!-- Info card with like and dislike ENDS -->
 
+
 				<br>
 				<br>
 
-				<!-- Add comment card -->
+
+				<!-- Add-comment card -->
+				<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Needs implementation!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 				<div class="demo-card-wide mdl-card mdl-shadow--16dp">
 					<div class="mdl-card__title" id="addTitle">
 						<h2 class="mdl-card__title-text">Add your comment:</h2>
 					</div>
 					<div class="mdl-card__supporting-text" align="left">
-						<!-- Simple Textfield -->
+						<!-- Textfield -->
 						<form action="#">
 							<div class="mdl-textfield mdl-js-textfield">
 								<input class="mdl-textfield__input" type="text" id="sample1">
@@ -203,7 +247,7 @@
 								<label class="mdl-textfield__label" for="sample1">Add comment:</label>
 							</div>
 						</form>
-						<!-- Simple Textfield ENDS -->
+						<!-- Textfield ENDS -->
 					</div>
 					<div class="mdl-card__actions mdl-card--border" align="left">
 						<button class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" id="submitButton">
@@ -211,21 +255,122 @@
 						</button>
 					</div>
 				</div>
-				<!-- Add comment card ENDS -->
+				<!-- Add-comment card ENDS -->
+
 
 				<br>
 				<br>
+
 
 				<!-- Display comment card -->
 				<div class="demo-card-wide mdl-card mdl-shadow--16dp">
+				
+					<!-- Title -->
 					<div class="mdl-card__title" id="displayTitle">
 						<h2 class="mdl-card__title-text">Comments from other people:</h2>
 					</div>
+					<!-- Title ENDS -->
+					
+					<!-- Content section -->
 					<div class="mdl-card__supporting-text" align="left">
-					<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Needs implement here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+					
+						<!-- Comment piece -->
+						<div class="mdl-card__actions">
+						
+							<!-- Anonymous user chip -->
+							<span class="mdl-chip mdl-chip--contact">
+								<img class="mdl-chip__contact" src="https://getmdl.io/templates/dashboard/images/user.jpg"></img>
+								<span class="mdl-chip__text">Anonymous_User:</span>
+							</span>
+							<!-- Anonymous user chip ENDS -->
+							
+							<!-- Comment text chip -->
+							<span class="mdl-chip mdl-shadow--8dp">
+								<span class="mdl-chip__text">this is absolutely fabulous</span>
+							</span>
+							<!-- Comment text chip ENDS -->
+							
+						</div>
+						<!-- Comment piece ENDS -->
+						
+						<!-- Comment piece -->
+						<div class="mdl-card__actions">
+						
+							<!-- User chip with name -->
+							<span class="mdl-chip mdl-chip--contact">
+								<span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">L</span>
+								<span class="mdl-chip__text">Lionel_Messi_10:</span>
+							</span>
+							<!-- User chip with name ENDS -->
+							
+							<!-- Comment text chip -->
+							<span class="mdl-chip mdl-shadow--8dp">
+								<span class="mdl-chip__text">I'm proud of this team!</span>
+							</span>
+							<!-- Comment text chip ENDS -->
+							
+						</div>
+						<!-- Comment piece ENDS -->
+						
+						<!-- Comment piece -->
+						<div class="mdl-card__actions">
+						
+							<!-- User chip with name -->
+							<span class="mdl-chip mdl-chip--contact">
+								<span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">彼</span>
+								<span class="mdl-chip__text">彼得张:</span>
+							</span>
+							<!-- User chip with name ENDS -->
+							
+							<!-- Comment text chip -->
+							<span class="mdl-chip mdl-shadow--8dp">
+								<span class="mdl-chip__text">巴萨万岁！</span>
+							</span>
+							<!-- Comment text chip ENDS -->
+							
+						</div>
+						<!-- Comment piece ENDS -->
+						
+						<!-- Comment piece -->
+						<div class="mdl-card__actions">
+						
+							<!-- User chip with name -->
+							<span class="mdl-chip mdl-chip--contact">
+								<span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">ド</span>
+								<span class="mdl-chip__text">ドナルド・トランプ:</span>
+							</span>
+							<!-- User chip with name ENDS -->
+							
+							<!-- Comment text chip -->
+							<span class="mdl-chip mdl-shadow--8dp">
+								<span class="mdl-chip__text">バルセロナ最高！！</span>
+							</span>
+							<!-- Comment text chip ENDS -->
+							
+						</div>
+						<!-- Comment piece ENDS -->
 
+						<!-- Comment piece -->
+						<div class="mdl-card__actions">
+						
+							<!-- Anonymous user chip -->
+							<span class="mdl-chip mdl-chip--contact">
+								<img class="mdl-chip__contact" src="https://getmdl.io/templates/dashboard/images/user.jpg"></img>
+								<span class="mdl-chip__text">Anonymous_User:</span>
+							</span>
+							<!-- Anonymous user chip ENDS -->
+							
+							<!-- Comment text chip -->
+							<span class="mdl-chip mdl-shadow--8dp">
+								<span class="mdl-chip__text">Força Barça!</span>
+							</span>
+							<!-- Comment text chip ENDS -->
+							
+						</div>
+						<!-- Comment piece ENDS -->
 
 					</div>
+					<!-- Content section ENDS -->
 				</div>
 				<!-- Display comment card ENDS -->
 
