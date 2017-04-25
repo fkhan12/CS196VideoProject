@@ -64,11 +64,11 @@ body {
 {% block body %}
 <form method="POST" action="{{ url_for('getNewVideo') }}">
 	Username:<br>
-	<input type="text" name="name" /><br>
+	<input type="text" name="nm" /><br>
 	Comment:<br>
-	<input type="text" name="url" /><br>
+	<input type="text" name="URL" /><br>
 	Category:<br>
-	<input type="text" name="category" /><br>
+	<input type="text" name="cat" /><br>
 	<input type="submit" value="Submit" />
 </form>
 {% endblock %}
