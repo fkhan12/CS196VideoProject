@@ -248,26 +248,28 @@
 						</div>
 						<!-- Card title ENDS -->
 						
+						<!-- Start the Form here-->
+						<form method="POST" action="{{ url_for('getNewVideo') }}">
 						<!-- Video info -->
 						<div class="mdl-card__supporting-text mdl-card--border" align="center">
-							<form method="POST" action="{{ url_for('getNewVideo') }}">
+							
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 									<input class="mdl-textfield__input" type="text" id="sample3" name="URL">
 									<label class="mdl-textfield__label" for="sample3">YouTube Link:</label>
 								</div>
-							</form>
-							<form method="POST" action="{{ url_for('getNewVideo') }}">
+							
+							
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 									<input class="mdl-textfield__input" type="text" id="sample3" name="comment">
 									<label class="mdl-textfield__label" for="sample3">Your description or comments:</label>
 								</div>
-							</form>
-							<form method="POST" action="{{ url_for('getNewVideo') }}">
+							
+							
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 									<input class="mdl-textfield__input" type="text" id="sample3" name="nm">
 									<label class="mdl-textfield__label" for="sample3">Your name:</label>
 								</div>
-							</form>
+							
 						</div>
 						<!-- Video info ENDS -->
 						
@@ -343,10 +345,11 @@
 						
 						<!-- Submit button -->
 						<div class="mdl-card__actions mdl-card--border">
-							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Submit!</a>
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit">Submit!</a>
 						</div>
 						<!-- Submit button ENDS -->
-						
+						</form>
+						<!--Form ends here-->
 					</div>
 					<!-- Upload card ENDS -->
 					
