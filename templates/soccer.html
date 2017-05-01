@@ -169,8 +169,9 @@ for #thumbnailImage above-->
 
 				
 					{% block Card %}
-						<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
+						
 							{% for ro in row %}
+							<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
 							<div id="c1" style="float: left; width:50%;">
 				<!--for different attributes, give me several different arrays, each with a different attribute, ex: videos, thumbnails, etc. Each array's index should correspond to the same video index in the other arrays, ex: index 0 in videos and index 0 in thumbnails should correspond with each other, such that the video and thumbnail are for the same post
 				NOTE: the id below may not work due to how the #thumbnailImage above is set up-->
@@ -186,9 +187,10 @@ for #thumbnailImage above-->
 									<br>
 								{% endif %}
 								</div>
+								</div>
 							{% endfor %}
 				
-						</div>
+						
 					{% endblock %}
 				
 
