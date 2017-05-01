@@ -119,24 +119,24 @@
 			<nav class="mdl-navigation">
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">SPORTS</span>
-				<a class="mdl-navigation__link" href="">Football</a>
-				<a class="mdl-navigation__link" href="soccer.html">Soccer</a>
-				<a class="mdl-navigation__link" href="">Basketball</a>
-				<a class="mdl-navigation__link" href="">Other sports...</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosFootball') }}">Football</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosSoccer') }}">Soccer</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosBasketball') }}">Basketball</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosOSports') }}">Other sports...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MUSIC</span>
-				<a class="mdl-navigation__link" href="">Classical</a>
-				<a class="mdl-navigation__link" href="">Pop</a>
-				<a class="mdl-navigation__link" href="">Instrumental</a>
-				<a class="mdl-navigation__link" href="">Other music...</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosClassical') }}">Classical</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosPop') }}">Pop</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosInstrumental') }}">Instrumental</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosOMusic') }}">Other music...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MOVIE</span>
-				<a class="mdl-navigation__link" href="">Action</a>
-				<a class="mdl-navigation__link" href="">Comedy</a>
-				<a class="mdl-navigation__link" href="">Documentary</a>
-				<a class="mdl-navigation__link" href="">Other movie...</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosAction') }}">Action</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosComedy') }}">Comedy</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosDocumentary') }}">Documentary</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosOMovies') }}">Other movie...</a>
 				<div class="cate-drawer-separator"></div>
-				<a class="mdl-navigation__link" href="">Others</a>
+				<a class="mdl-navigation__link" href="{{ url_for('listVideosO') }}">Others</a>
 			</nav>
 
 		</div>
