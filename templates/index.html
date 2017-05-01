@@ -148,27 +148,45 @@
 			<span class="mdl-layout-title"><b>Categories</b></span>
 
 			<nav class="mdl-navigation">
+
+				<!--Script for passing category info to backend; uses jquery and ajax get
+				http://stackoverflow.com/questions/29987323/how-do-i-send-data-from-js-to-python-with-flask
+				https://api.jquery.com/jQuery.get/-->
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+				<script type=text/javascript>
+					$(document).ready(function(){
+						$("a").click(function(){
+							$.get("index.html", this.getAttribute('id'))
+						})
+					});
+				</script>
+
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">SPORTS</span>
-				<a class="mdl-navigation__link" href="">Football</a>
-				<a class="mdl-navigation__link" href="soccer.html">Soccer</a>
-				<a class="mdl-navigation__link" href="">Basketball</a>
-				<a class="mdl-navigation__link" href="">Other sports...</a>
+				<a class="mdl-navigation__link" id="Football" href="">Football</a>
+				<a class="mdl-navigation__link" id="Soccer" href="soccer.html" onClick="passTabInfo(this.getAttribute('id'))">Soccer</a>
+				<a class="mdl-navigation__link" id="Basketball" href="">Basketball</a>
+				<a class="mdl-navigation__link" id="Other sports..." href="">Other sports...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MUSIC</span>
-				<a class="mdl-navigation__link" href="">Classical</a>
-				<a class="mdl-navigation__link" href="">Pop</a>
-				<a class="mdl-navigation__link" href="">Instrumental</a>
-				<a class="mdl-navigation__link" href="">Other music...</a>
+				<a class="mdl-navigation__link" id="Classical" href="">Classical</a>
+				<a class="mdl-navigation__link" id="Pop" href="">Pop</a>
+				<a class="mdl-navigation__link" id="Instrumental" href="">Instrumental</a>
+				<a class="mdl-navigation__link" id="Other music..." href="">Other music...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MOVIE</span>
-				<a class="mdl-navigation__link" href="">Action</a>
-				<a class="mdl-navigation__link" href="">Comedy</a>
-				<a class="mdl-navigation__link" href="">Documentary</a>
-				<a class="mdl-navigation__link" href="">Other movie...</a>
+				<a class="mdl-navigation__link" id="Action" href="">Action</a>
+				<a class="mdl-navigation__link" id="Comedy" href="">Comedy</a>
+				<a class="mdl-navigation__link" id="Documentary" href="">Documentary</a>
+				<a class="mdl-navigation__link" id="Other movie..." href="">Other movie...</a>
 				<div class="cate-drawer-separator"></div>
-				<a class="mdl-navigation__link" href="">Others</a>
+				<a class="mdl-navigation__link" id="Others" href="">Others</a>
 			</nav>
+
+			<!--http://flask.pocoo.org/docs/0.10/patterns/jquery/-->
+			<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="{{ url_for('static', filename='jquery.js') }}">\x3C/script>')</script>-->
 
 		</div>
 		<!-- DrawerENDS -->
