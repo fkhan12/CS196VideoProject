@@ -11,14 +11,14 @@
 				<td>Date</td>
 			</thead>
 			
-			{% for row in rows %}
+			{% for ro in row %}
 				<tr>
-					<td>{{ row["name"] }}</td>
-					<td>{{ row["url"] }}</td>
-					<td>{{ row["category"] }}</td>
-					<td>{{ row["comment"] }}</td>
-					<td>{{ row["image"] }}</td>
-					<td>{{ row["date"] }}</td>
+					<td>{{ ro["name"] }}</td>
+					<td>{{ ro["url"] }}</td>
+					<td>{{ ro["category"] }}</td>
+					<td>{{ ro["comment"] }}</td>
+					<td>{{ ro["image"] }}</td>
+					<td>{{ ro["date"] }}</td>
 				</tr>
 			{% endfor %}
 		</table>
