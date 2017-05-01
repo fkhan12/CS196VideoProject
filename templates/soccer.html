@@ -197,17 +197,18 @@ for #thumbnailImage above-->
 									</div>
 								</a>
 							</div>
-
-								<br>
-								<br>
-								<br>
 								{% set pos = pos + 1 %}
 
 							</div>
 
-						{% endfor %}
+							<br>
+							<br>
+							<br>
 
-					{% else %}
+						{% endfor %}
+						{% endif %}
+
+					{% if row|length % 2 == 1 %}
 
 						{% set posit = 0 %}
 						{% for i in range(((row|length - 1)/2) | int) %}
@@ -231,13 +232,14 @@ for #thumbnailImage above-->
 									</div>
 								</a>
 							</div>
-
-								<br>
-								<br>
-								<br>
 								{% set posit = posit + 1 %}
 
 							</div>
+
+
+								<br>
+								<br>
+								<br>
 
 						{% endfor %}
 
