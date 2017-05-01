@@ -175,7 +175,7 @@ for #thumbnailImage above-->
 
 					{% if row|length % 2 == 0 %}
 						{% set pos = 0 %}
-						{% for i in range((row|length)/2) %}
+						{% for i in range(((row|length)/2) | int) %}
 
 							<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
 							<div id="c1" style="float: left; width:50%;">
@@ -207,7 +207,7 @@ for #thumbnailImage above-->
 					{% else %}
 
 						{% set posit = 0 %}
-						{% for i in range((row|length - 1)/2) %}
+						{% for i in range(((row|length - 1)/2) | int) %}
 
 							<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
 							<div id="c1" style="float: left; width:50%;">
