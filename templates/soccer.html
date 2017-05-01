@@ -8,7 +8,9 @@
 
 
 <head>
-	<title>{% row["category"] %}</title>
+	{% block title %}
+	<title>{{ row["category"] }}</title>
+	{% endblock %}
 </head>
 
 
@@ -107,9 +109,10 @@ for #thumbnailImage above-->
 				<div class="mdl-layout-spacer">
 				</div>
 
+				{% block layoutTitle %}
 				<span class="mdl-layout-title">{% row["category"] %}
 				</span>
-
+				{% endblock %}
 				<div class="mdl-layout-spacer">
 				</div>
 
