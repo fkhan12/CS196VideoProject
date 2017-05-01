@@ -186,20 +186,23 @@ for #thumbnailImage above-->
 										<span class="demo-card-image__filename">Uploader: {{ row[pos]["name"] }}</span>
 									</div>
 								</a>
+							</div>
 								{% set pos = pos + 1 %}
+
+							<div id="c2" style="float: left; width:50%;">
 								<a href="{{ row[pos]['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row[pos]['image'] }}) center / cover">
 									<div class="mdl-card__title mdl-card--expand"></div>
 									<div class="mdl-card__actions">
 										<span class="demo-card-image__filename">Uploader: {{ row[pos]["name"] }}</span>
 									</div>
 								</a>
+							</div>
 
 								<br>
 								<br>
 								<br>
 								{% set pos = pos + 1 %}
 
-							</div>
 							</div>
 
 						{% endfor %}
@@ -218,20 +221,22 @@ for #thumbnailImage above-->
 										<span class="demo-card-image__filename">Uploader: {{ row[posit]["name"] }}</span>
 									</div>
 								</a>
+							</div>
 								{% set posit = posit + 1 %}
+							<div id="c2" style="float: left; width:50%;">
 								<a href="{{ row[posit]['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row[posit]['image'] }}) center / cover">
 									<div class="mdl-card__title mdl-card--expand"></div>
 									<div class="mdl-card__actions">
 										<span class="demo-card-image__filename">Uploader: {{ row[posit]["name"] }}</span>
 									</div>
 								</a>
+							</div>
 
 								<br>
 								<br>
 								<br>
 								{% set posit = posit + 1 %}
 
-							</div>
 							</div>
 
 						{% endfor %}
