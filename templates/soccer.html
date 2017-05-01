@@ -9,7 +9,7 @@
 
 <head>
 	{% block title %}
-	<title>{{ row["category"][0] }}</title>
+	<title>{{ row[0]["category"] }}</title>
 	{% endblock %}
 </head>
 
@@ -79,12 +79,6 @@
 		right: 40px;
 		bottom: 36px;
 	}
-
-	{% block Image %}
-	#thumbnailImage {
-		background: url({{ row["image"] }}) center / cover;
-	}
-	{% endblock %}
 	
 </style>
 
@@ -110,7 +104,7 @@ for #thumbnailImage above-->
 				</div>
 
 				{% block layoutTitle %}
-				<span class="mdl-layout-title">{{ row["category"][0] }}
+				<span class="mdl-layout-title">{{ row[0]["category"] }}
 				</span>
 				{% endblock %}
 				<div class="mdl-layout-spacer">
@@ -182,7 +176,7 @@ for #thumbnailImage above-->
 								<a href="{{ video }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row['image'][loop.index0] }}) center / cover">
 									<div class="mdl-card__title mdl-card--expand"></div>
 									<div class="mdl-card__actions">
-										<span class="demo-card-image__filename">Uploader: {{ row["name"][loop.index0] }}</span>
+										<span class="demo-card-image__filename">Uploader: {{ row[loop.index0]["name"] }}</span>
 									</div>
 								</a>
 								{% if loop.index0 % 2==1 %}
