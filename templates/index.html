@@ -152,7 +152,7 @@
 				<!--Script for passing category info to backend; uses jquery and ajax get
 				http://stackoverflow.com/questions/29987323/how-do-i-send-data-from-js-to-python-with-flask
 				https://api.jquery.com/jQuery.get/-->
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+				<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
 				<script type=text/javascript>
 					$(document).ready(function(){
@@ -160,28 +160,30 @@
 							$.get("index.html", this.getAttribute('id'))
 						});
 					});
-				</script>
+				</script>-->
+
+				<!--onClick="passTabInfo(this.getAttribute('id'))"-->
 
 				<div class="cate-drawer-separator"></div>
-				<span class="mdl-navigation__link" href="soccer.html">SPORTS</span>
-				<a class="mdl-navigation__link" id="Football" href="soccer.html">Football</a>
-				<a class="mdl-navigation__link" id="Soccer" href="soccer.html" onClick="passTabInfo(this.getAttribute('id'))">Soccer</a>
-				<a class="mdl-navigation__link" id="Basketball" href="soccer.html">Basketball</a>
-				<a class="mdl-navigation__link" id="Other sports..." href="soccer.html">Other sports...</a>
+				<span class="mdl-navigation__link" href="">SPORTS</span>
+				<a class="mdl-navigation__link" id="Football" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Football</a>
+				<a class="mdl-navigation__link" id="Soccer" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Soccer</a>
+				<a class="mdl-navigation__link" id="Basketball" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Basketball</a>
+				<a class="mdl-navigation__link" id="Other sports..." href="{{ url_for('list', tab=this.getAttribute('id')) }}">Other sports...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MUSIC</span>
-				<a class="mdl-navigation__link" id="Classical" href="soccer.html">Classical</a>
-				<a class="mdl-navigation__link" id="Pop" href="">Pop</a>
-				<a class="mdl-navigation__link" id="Instrumental" href="soccer.html">Instrumental</a>
-				<a class="mdl-navigation__link" id="Other music..." href="soccer.html">Other music...</a>
+				<a class="mdl-navigation__link" id="Classical" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Classical</a>
+				<a class="mdl-navigation__link" id="Pop" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Pop</a>
+				<a class="mdl-navigation__link" id="Instrumental" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Instrumental</a>
+				<a class="mdl-navigation__link" id="Other music..." href="{{ url_for('list', tab=this.getAttribute('id')) }}">Other music...</a>
 				<div class="cate-drawer-separator"></div>
 				<span class="mdl-navigation__link" href="">MOVIE</span>
-				<a class="mdl-navigation__link" id="Action" href="soccer.html">Action</a>
-				<a class="mdl-navigation__link" id="Comedy" href="soccer.html">Comedy</a>
-				<a class="mdl-navigation__link" id="Documentary" href="soccer.html">Documentary</a>
-				<a class="mdl-navigation__link" id="Other movie..." href="soccer.html">Other movie...</a>
+				<a class="mdl-navigation__link" id="Action" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Action</a>
+				<a class="mdl-navigation__link" id="Comedy" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Comedy</a>
+				<a class="mdl-navigation__link" id="Documentary" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Documentary</a>
+				<a class="mdl-navigation__link" id="Other movie..." href="{{ url_for('list', tab=this.getAttribute('id')) }}">Other movie...</a>
 				<div class="cate-drawer-separator"></div>
-				<a class="mdl-navigation__link" id="Others" href="soccer.html">Others</a>
+				<a class="mdl-navigation__link" id="Others" href="{{ url_for('list', tab=this.getAttribute('id')) }}">Others</a>
 			</nav>
 
 			<!--http://flask.pocoo.org/docs/0.10/patterns/jquery/-->
