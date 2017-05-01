@@ -168,31 +168,90 @@ for #thumbnailImage above-->
 				<!--Start of Jinja templating attempt-->
 
 				
-					{% block Card %}
-						<!--wrapper is applying to each card instead of two at a time-->
-							{% for ro in row %}
+					
+				
+
+					{% block CardAttempt2 %}
+
+					{% if row|length % 2 == 0 %}
+						{% set pos = 0 %}
+						{% for i in range((row|length)/2) %}
+
 							<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
 							<div id="c1" style="float: left; width:50%;">
-				<!--for different attributes, give me several different arrays, each with a different attribute, ex: videos, thumbnails, etc. Each array's index should correspond to the same video index in the other arrays, ex: index 0 in videos and index 0 in thumbnails should correspond with each other, such that the video and thumbnail are for the same post
-				NOTE: the id below may not work due to how the #thumbnailImage above is set up-->
-								<a href="{{ ro['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ ro['image'] }}) center / cover">
+
+								<a href="{{ row[pos]['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row[pos]['image'] }}) center / cover">
 									<div class="mdl-card__title mdl-card--expand"></div>
 									<div class="mdl-card__actions">
-										<span class="demo-card-image__filename">Uploader: {{ ro["name"] }}</span>
+										<span class="demo-card-image__filename">Uploader: {{ row[pos]["name"] }}</span>
 									</div>
 								</a>
-								{% if loop.index0 % 2==1 %}
-									<br>
-									<br>
-									<br>
-								{% endif %}
-								</div>
-								</div>
-							{% endfor %}
-				
-						
+								{% set pos = pos + 1 %}
+								<a href="{{ row[pos]['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row[pos]['image'] }}) center / cover">
+									<div class="mdl-card__title mdl-card--expand"></div>
+									<div class="mdl-card__actions">
+										<span class="demo-card-image__filename">Uploader: {{ row[pos]["name"] }}</span>
+									</div>
+								</a>
+
+								<br>
+								<br>
+								<br>
+								{% set pos = pos + 1 %}
+
+							</div>
+							</div>
+
+						{% endfor %}
+
+					{% else %}
+
+						{% set posit = 0 %}
+						{% for i in range((row|length - 1)/2) %}
+
+							<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
+							<div id="c1" style="float: left; width:50%;">
+
+								<a href="{{ row[posit]['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row[posit]['image'] }}) center / cover">
+									<div class="mdl-card__title mdl-card--expand"></div>
+									<div class="mdl-card__actions">
+										<span class="demo-card-image__filename">Uploader: {{ row[posit]["name"] }}</span>
+									</div>
+								</a>
+								{% set posit = posit + 1 %}
+								<a href="{{ row[posit]['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row[posit]['image'] }}) center / cover">
+									<div class="mdl-card__title mdl-card--expand"></div>
+									<div class="mdl-card__actions">
+										<span class="demo-card-image__filename">Uploader: {{ row[posit]["name"] }}</span>
+									</div>
+								</a>
+
+								<br>
+								<br>
+								<br>
+								{% set posit = posit + 1 %}
+
+							</div>
+							</div>
+
+						{% endfor %}
+
+						<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
+							<div id="c1" style="float: left; width:50%;">
+
+								<a href="{{ row[row|length - 1]['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row[row|length - 1]['image'] }}) center / cover">
+									<div class="mdl-card__title mdl-card--expand"></div>
+									<div class="mdl-card__actions">
+										<span class="demo-card-image__filename">Uploader: {{ row[row|length - 1]["name"] }}</span>
+									</div>
+								</a>
+
+							</div>
+						</div>
+
+					{% endif %}
+
 					{% endblock %}
-				
 
 			</div>
 		</main>
