@@ -167,9 +167,9 @@ for #thumbnailImage above-->
 
 				<!--Start of Jinja templating attempt-->
 
-				<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
+				
 					{% block Card %}
-						
+						<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
 							{% for ro in row %}
 							<div id="c1" style="float: left; width:50%;">
 				<!--for different attributes, give me several different arrays, each with a different attribute, ex: videos, thumbnails, etc. Each array's index should correspond to the same video index in the other arrays, ex: index 0 in videos and index 0 in thumbnails should correspond with each other, such that the video and thumbnail are for the same post
@@ -188,9 +188,9 @@ for #thumbnailImage above-->
 								</div>
 							{% endfor %}
 				
-						
+						</div>
 					{% endblock %}
-				</div>
+				
 
 			</div>
 		</main>
