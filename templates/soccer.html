@@ -177,7 +177,7 @@ for #thumbnailImage above-->
 						{% set pos = 0 %}
 						{% for i in range(((row|length)/2) | int) %}
 
-							<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
+							<div id="wrapper" style="height:350px; width:100%; overflow: scroll;">
 							<div id="c1" style="float: left; width:40%;">
 
 								<a href="{{ row[pos]['url'] }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url({{ row[pos]['image'] }}) center / cover">
