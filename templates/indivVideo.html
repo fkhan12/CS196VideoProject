@@ -153,37 +153,14 @@
 				
 				<!-- YouTube Player card -->
 				
-				<div id="ytplayer" class="demo-card-image mdl-card mdl-shadow--16dp">
-					<!--<iframe id="ytplayer" type="text/html" width="960" height="540" src="https://www.youtube.com/embed/{{ uniqueID }}?enablejsapi=1?rel=0?showinfo=0?ecver=2" frameborder="1" allowfullscreen>-->
+				<div class="demo-card-image mdl-card mdl-shadow--16dp">
+					<iframe id="ytplayer" type="text/html" width="960" height="540" src="https://www.youtube.com/embed/{{ uniqueID }}" frameborder="1" allowfullscreen>
 					<!--<iframe width="960" height="540" src="https://www.youtube.com/embed/{{ uniqueID }}" frameborder="1" allowfullscreen>-->
-					<!--</iframe>-->
-					<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+					</iframe>
+					<!--<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>-->
 				</div>
 
-				<!--script below from http://stackoverflow.com/questions/41014591/when-i-insert-a-iframe-youtube-video-doesnt-work-->
-				<script>
-					var tag = document.createElement('script');
-					tag.src = "https://www.youtube.com/player_api";
-					var firstScriptTag = document.getElementsByTagName('script')[0];
-					firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-					var player;
-					function onYouTubePlayerAPIReady() {
-    					player = new YT.Player('ytplayer', {
-        				height: '360',
-        				width: '640',
-        				videoId: '{{ uniqueID }}',
-        				events: {
-            				'onReady': onPlayerReady
-        				}
-    					});
-					}
-					function onPlayerReady() {
-    					console.log("test");
-    					player.playVideo();
-    					player.mute();
-					}
-				</script>
+				<!--script below was from http://stackoverflow.com/questions/41014591/when-i-insert-a-iframe-youtube-video-doesnt-work-->
 				
 				<!-- YouTube Player card ENDS -->
 				
