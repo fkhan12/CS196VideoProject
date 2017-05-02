@@ -83,7 +83,7 @@
 			<div class="mdl-layout__header-row">
 			
 				<!-- Home Button -->
-				<a href="index.html" id="home" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-button--accent mdl-js-ripple-effect mdl-shadow--16dp">
+				<a href="{{ url_for('goHome') }}" id="home" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-button--accent mdl-js-ripple-effect mdl-shadow--16dp">
 					<i class="material-icons">home</i>
 				</a>
 				<!-- Home Button ENDS -->
@@ -154,7 +154,7 @@
 				<!-- YouTube Player card -->
 				
 				<div class="demo-card-image mdl-card mdl-shadow--16dp">
-					<iframe id="ytplayer" type="text/html" width="960" height="540" src="https://www.youtube.com/embed/{{ uniqueID }}?enablejsapi=1&rel=0&showinfo=0" https://www.youtube.com/watch?v={{ uniqueID }} frameborder="1" allowfullscreen>
+					<iframe id="ytplayer" type="text/html" width="960" height="540" src="https://www.youtube.com/embed/{{ uniqueID }}?enablejsapi=1&rel=0&showinfo=0" frameborder="1" allowfullscreen>
 					</iframe>
 				</div>
 				
