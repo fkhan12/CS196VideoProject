@@ -154,7 +154,8 @@
 				<!-- YouTube Player card -->
 				
 				<div class="demo-card-image mdl-card mdl-shadow--16dp">
-					<iframe id="ytplayer" type="text/html" width="960" height="540" src="https://www.youtube.com/embed/{{ uniqueID }}?enablejsapi=1?rel=0?showinfo=0?ecver=2" frameborder="1" allowfullscreen>
+					<!--<iframe id="ytplayer" type="text/html" width="960" height="540" src="https://www.youtube.com/embed/{{ uniqueID }}?enablejsapi=1?rel=0?showinfo=0?ecver=2" frameborder="1" allowfullscreen>-->
+					<iframe width="960" height="540" src="https://www.youtube.com/embed/{{ uniqueID }}" allowfullscreen>
 					</iframe>
 				</div>
 				
@@ -168,9 +169,11 @@
 				<div class="demo-card-wide mdl-card mdl-shadow--16dp">
 					
 					<!-- Card title -->
+					{% block another %}
 					<div class="mdl-card__title">
-						<h2 class="mdl-card__title-text">FC Barcelona, the only club still alive in three Champions League competitions</h2>
+						<h2 class="mdl-card__title-text">Uploader: {{ name }}</h2>
 					</div>
+					{% endblock %}
 					<!-- Card title ENDS -->
 					
 					<!-- Card description section -->
@@ -180,13 +183,6 @@
 						{% block descr %}
 						<div class="mdl-card__supporting-text">
 							{{ description }}<br>
-							----<br>
-							FC Barcelona on Social Media
-							Subscribe to our official channel http://www.youtube.com/subscription_c...
-							Facebook: http://www.facebook.com/fcbarcelona
-							Twitter: http://twitter.com/FCBarcelona
-							Google+: http://plus.google.com/+FCBarcelona
-							Instagram: http://www.instagram.com/FCBarcelona
 						</div>
 						{% endblock %}
 						<!-- Description Text ENDS -->
@@ -199,10 +195,10 @@
 								<span class="mdl-chip__text">Uploader: {{ name }}</span>
 							</span>
 							<span class="mdl-chip mdl-shadow--4dp">
-								<span class="mdl-chip__text">Uploaded on Mar 30, 2017</span>
+								<span class="mdl-chip__text">Uploaded on May 2, 2017</span>
 							</span>
 							<span class="mdl-chip mdl-shadow--4dp">
-								<span class="mdl-chip__text">512 likes</span>
+								<span class="mdl-chip__text">0 likes</span>
 							</span>
 						</div>
 						{% endblock %}
