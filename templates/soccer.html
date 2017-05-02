@@ -176,7 +176,7 @@ for #thumbnailImage above-->
 				<!--for different attributes, give me several different arrays, each with a different attribute, ex: videos, thumbnails, etc. Each array's index should correspond to the same video index in the other arrays, ex: index 0 in videos and index 0 in thumbnails should correspond with each other, such that the video and thumbnail are for the same post
 				NOTE: the id below may not work due to how the #thumbnailImage above is set up
 				href="{{ ro['url'] }}" -->
-								<a href="{{ url_for('getParams', description = ro['comment'], name = ro['name'], uniqueID = ro['uniqueID']) }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url(https://www.youtube.com/watch?v={{ ro['uniqueID'] }}) center / cover">
+								<a href="{{ url_for('getParams', description = ro['comment'], name = ro['name'], uniqueID = ro['uniqueID']) }}" class="demo-card-image mdl-card mdl-shadow--16dp" style="background: url(https://img.youtube.com/vi/{{ ro['uniqueID'] }}/maxresdefault.jpg) center / cover">
 									<div class="mdl-card__title mdl-card--expand"></div>
 									<div class="mdl-card__actions">
 										<span class="demo-card-image__filename">Uploader: {{ ro["name"] }}</span>
