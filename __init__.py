@@ -3,10 +3,10 @@ import sqlite3, datetime
 
 
 app = Flask(__name__)
-
 conn = sqlite3.connect('database.db')
-#conn.execute('CREATE TABLE videos (name TEXT, url TEXT, category TEXT, comment TEXT, image TEXT, dateT TEXT)')
-#conn.execute('CREATE TABLE comments (ID TEXT,user TEXT, commment TEXT)')
+
+#conn.execute('CREATE TABLE videos (name TEXT, url TEXT, category TEXT, comment TEXT, image TEXT, dateT TEXT, uniqueID TEXT, title TEXT)')
+
 
 @app.route('/')
 def home():
@@ -16,6 +16,7 @@ def home():
 def goHome():
     return render_template('index.html')
 
+#when user presses submit on the form, this retrieves all of the info about the video and puts it in the database table
 @app.route('/getNewVideo', methods = ['POST', 'GET'])
 def getNewVideo():
     conn = sqlite3.connect('database.db')
@@ -25,24 +26,25 @@ def getNewVideo():
             URL = request.form['URL']
             categ = request.form['cat']
             com = request.form['comment']
+            titleText = request.form['title']
 
-            im = ""
+            unique = ""
             for i in range (len(URL)):
                 if(URL[i] == '='):
-                    im = URL[i+1:]
+                    unique = URL[i+1:]
                     break
 
-            imageURL = "https://img.youtube.com/vi/" + im + "/maxresdefault.jpg"
+            imageURL = "https://img.youtube.com/vi/" + unique + "/maxresdefault.jpg"
 
             currentDateTime = datetime.datetime.now()
 
-            currentDate = str(currentDateTime.date())
+            currentDate = str(currentDateTime.year())
 
             with sqlite3.connect('database.db') as conn:
 
                 cur = conn.cursor()
-                cur.execute("INSERT INTO videos (name, url, category, comment, image, dateT) VALUES(?, ?, ?, ?, ?, ?)",
-                            (nm, URL, categ, com, imageURL, currentDate))
+                cur.execute("INSERT INTO videos (name, url, category, comment, image, dateT, uniqueID, title) VALUES(?, ?, ?, ?, ?, ?,?,?)",
+                            (nm, URL, categ, com, imageURL, currentDate, unique,titleText))
                 conn.commit()
                 msg = "Successfully added"
         except:
@@ -53,7 +55,7 @@ def getNewVideo():
             return render_template('index.html')
             conn.close()
 
-
+#used for testing purposes to list everything currently in the database table
 @app.route('/listVideos')
 def listVideos():
     conn = sqlite3.connect('database.db')
@@ -66,13 +68,17 @@ def listVideos():
 
     return render_template("list.html", row = row)
 
+#when a user clicks on a video, this retrieves the specific video parameters encoded in the URL and sends them to the template
 @app.route('/getParams')
 def getParams():
     description = request.args.get('description')
-    user = request.args.get('user')
-    url = request.args.get('url')
+    user = request.args.get('name')
+    unique = request.args.get('uniqueID')
+    title = request.args.get('title')
+    dateT = request.args.get('dateT')
 
-    return render_template('indivVideo.html')
+    return render_template('indivVideo.html', description = description, name = user,  uniqueID = unique,
+                           title = title, dateT = dateT)
 
 @app.route('/listVideosFootball')
 def listVideosFootball():
