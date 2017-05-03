@@ -9,7 +9,11 @@
 
 <head>
 	{% block title %}
+	{% if row|length > 0 %}
 	<title>{{ row[0]["category"] }}</title>
+	{% else %}
+	<title>There are no videos here yet.</title>
+	{% endif %}
 	{% endblock %}
 </head>
 
@@ -104,8 +108,13 @@ for #thumbnailImage above-->
 				</div>
 
 				{% block layoutTitle %}
+				{% if row|length > 0 %}
 				<span class="mdl-layout-title">{{ row[0]["category"] }}
 				</span>
+				{% else %}
+				<span class="mdl-layout-title">This is a default category name
+				</span>
+				{% endif %}
 				{% endblock %}
 				<div class="mdl-layout-spacer">
 				</div>
@@ -169,6 +178,7 @@ for #thumbnailImage above-->
 
 				
 					{% block Card %}
+					{% if row|length > 0 %}
 						<!--wrapper is applying to each card instead of two at a time-->
 							{% for ro in row %}
 							<div id="wrapper" style="height:350px; width:100%; overflow: hidden;">
@@ -191,7 +201,9 @@ for #thumbnailImage above-->
 								</div>
 							{% endfor %}
 				
-						
+					{% else %}
+						<h1>There are no videos yet</h1>
+					{% endif %}
 					{% endblock %}
 				
 
