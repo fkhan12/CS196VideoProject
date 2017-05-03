@@ -9,6 +9,7 @@
 				<td>Comment</td>
 				<td>Image</td>
 				<td>Date</td>
+				<td>uniqueID</td>
 			</thead>
 			
 			{% for ro in row %}
@@ -19,6 +20,7 @@
 					<td>{{ ro["comment"] }}</td>
 					<td>{{ ro["image"] }}</td>
 					<td>{{ ro["date"] }}</td>
+					<td>{{ ro["unique"] }}</td>
 				</tr>
 			{% endfor %}
 		</table>
