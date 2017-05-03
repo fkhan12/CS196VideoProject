@@ -5,7 +5,7 @@ import sqlite3, datetime
 app = Flask(__name__)
 conn = sqlite3.connect('database.db')
 
-conn.execute('CREATE TABLE videos (name TEXT, url TEXT, category TEXT, comment TEXT, image TEXT, dateT TEXT, uniqueID TEXT, title TEXT)')
+#conn.execute('CREATE TABLE videos (name TEXT, url TEXT, category TEXT, comment TEXT, image TEXT, dateT TEXT, uniqueID TEXT, title TEXT)')
 
 
 @app.route('/')
