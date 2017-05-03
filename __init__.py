@@ -21,39 +21,39 @@ def goHome():
 def getNewVideo():
     conn = sqlite3.connect('database.db')
     if request.method == 'POST':
-        try:
-            nm = request.form['nm']
-            URL = request.form['URL']
-            categ = request.form['cat']
-            com = request.form['comment']
-            titleText = request.form['title']
+        # try:
+        nm = request.form['nm']
+        URL = request.form['URL']
+        categ = request.form['cat']
+        com = request.form['comment']
+        titleText = request.form['title']
 
-            unique = ""
-            for i in range (len(URL)):
-                if(URL[i] == '='):
-                    unique = URL[i+1:]
-                    break
+        unique = ""
+        for i in range (len(URL)):
+            if(URL[i] == '='):
+                unique = URL[i+1:]
+                break
 
-            imageURL = "https://img.youtube.com/vi/" + unique + "/maxresdefault.jpg"
+        imageURL = "https://img.youtube.com/vi/" + unique + "/maxresdefault.jpg"
 
-            currentDateTime = datetime.datetime.now()
+        currentDateTime = datetime.datetime.now()
+        # print(currentDateTime.year())
+        currentDate = str(currentDateTime.year) + "-" + str(currentDateTime.month) + "-" + str(currentDateTime.day)
 
-            currentDate = str(currentDateTime.year())
+        with sqlite3.connect('database.db') as conn:
+            print("Hello")
 
-            with sqlite3.connect('database.db') as conn:
-
-                cur = conn.cursor()
-                cur.execute("INSERT INTO videos (name, url, category, comment, image, dateT, uniqueID, title) VALUES(?, ?, ?, ?, ?, ?,?,?)",
-                            (nm, URL, categ, com, imageURL, currentDate, unique,titleText))
-                conn.commit()
-                msg = "Successfully added"
-        except:
-            conn.rollback()
-            msg = "error in insert"
-
-        finally:
-            return render_template('index.html')
-            conn.close()
+            cur = conn.cursor()
+            cur.execute("INSERT INTO videos (name, url, category, comment, image, dateT, uniqueID, title) VALUES(?, ?, ?, ?, ?, ?,?,?)",(nm, URL, categ, com, imageURL,currentDate, unique, titleText))
+            conn.commit()
+            msg = "Successfully added"
+        # except:
+        #     conn.rollback()
+        #     msg = "error in insert"
+        #
+        # finally:
+        return render_template('index.html')
+        conn.close()
 
 #used for testing purposes to list everything currently in the database table
 @app.route('/listVideos')
